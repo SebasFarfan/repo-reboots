@@ -55,6 +55,12 @@
             <artifactId>popper.js</artifactId>
             <version>1.16.1-lts</version>
         </dependency>
+		<!-- https://mvnrepository.com/artifact/org.webjars/font-awesome -->
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>font-awesome</artifactId>
+			<version>5.15.2</version>
+		</dependency>
 
 	</dependencies>
 

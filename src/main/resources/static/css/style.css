@@ -12,6 +12,11 @@ body {
     color: #663F37;
 }
 
+.enlace-personal {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
 .info-producto {
     margin-bottom: 1rem;
 }
