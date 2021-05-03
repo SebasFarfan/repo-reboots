@@ -151,8 +151,8 @@ public class Cliente {
 		String texto = "";
 		LocalDate hoy = LocalDate.now();
 		int anio;
-		if (hoy.getMonthValue() < this.fechaNacimiento.getMonthValue()) {
-			if (hoy.getDayOfMonth() < this.fechaNacimiento.getDayOfMonth()) {
+		if (hoy.getMonthValue() <= this.fechaNacimiento.getMonthValue()) {
+			if (hoy.getDayOfMonth() <= this.fechaNacimiento.getDayOfMonth()) {
 				anio = hoy.getYear();
 			} else {
 				anio = hoy.getYear() + 1;

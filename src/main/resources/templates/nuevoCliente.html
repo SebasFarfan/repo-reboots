@@ -41,6 +41,10 @@
                                 <label class="badge badge-primary" for="nya">Apellido y Nombre </label>            
 	                            <input class="form-control" type="text" id="nya" th:field="*{nombreApellido}" placeholder="Ingrese apellido y nombre">
                             </div>
+                            <div class="form-group">
+                                <label class="badge badge-primary" for="email">E-mail </label>            
+	                            <input class="form-control" type="email" id="email" th:field="*{email}" placeholder="yo@ejemplo.com">
+                            </div>
                             <div class="row">
                                 <div class="col">
                                     <div class="form-group">
@@ -78,7 +82,9 @@
                     </div>
                 </div>
             </div>
-            <aside th:replace="layouts/aside :: aside"></aside>
+            <div class="col-md-3 col-lg-4 d-none d-sm-block">                
+                <aside th:replace="layouts/aside :: aside"></aside>                                
+            </div>            
         </div>
     </div>
     <footer th:replace="layouts/footer :: footer"></footer>
