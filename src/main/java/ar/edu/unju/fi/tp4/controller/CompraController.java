@@ -39,7 +39,7 @@ public class CompraController {
 	
 	@GetMapping("/compra/listado")
 	public ModelAndView mostrarListado() {
-		ModelAndView model = new ModelAndView("listado");
+		ModelAndView model = new ModelAndView("listaCompras");
 		model.addObject("compra", compraService.getCompra());
 		return model;
 	}
