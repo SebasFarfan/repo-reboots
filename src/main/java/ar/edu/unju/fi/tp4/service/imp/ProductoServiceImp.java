@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import ar.edu.unju.fi.tp4.model.Producto;
@@ -20,7 +21,7 @@ public class ProductoServiceImp implements IProductoService {
 
     private List<Producto> listaProducto = new ArrayList<Producto>();
 
-    @Override
+    //@Override
     public void agregarProducto(Producto producto) {
         listaProducto.add(producto);
         LOGGER.info("METHOD: agregarProducto(producto) - se agregó un producto al listado -->"
@@ -28,7 +29,7 @@ public class ProductoServiceImp implements IProductoService {
         
     }
 
-    @Override
+    //@Override
     public Producto obtenerUltimoProducto() {
         Producto producto = listaProducto.get(listaProducto.size() - 1);
         LOGGER.info(
