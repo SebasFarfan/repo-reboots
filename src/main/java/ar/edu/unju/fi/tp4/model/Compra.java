@@ -29,8 +29,6 @@ public class Compra {
 	}
 
 
-
-
 	public int getId() {
 		return id;
 	}

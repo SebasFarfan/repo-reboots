@@ -25,7 +25,7 @@ public class CompraController {
     @GetMapping("/compra/nuevo")
 	public String nuevoCompra(Model model) {
 		model.addAttribute(compra);
-		return "nuevoCompra";
+		return "compraForm";
 	}
 	
 	@PostMapping("/compra/guardar")
@@ -39,7 +39,7 @@ public class CompraController {
 	
 	@GetMapping("/compra/listado")
 	public ModelAndView mostrarListado() {
-		ModelAndView model = new ModelAndView("listado");
+		ModelAndView model = new ModelAndView("listaCompras");
 		model.addObject("compra", compraService.getCompra());
 		return model;
 	}
