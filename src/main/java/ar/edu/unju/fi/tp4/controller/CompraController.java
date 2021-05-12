@@ -28,6 +28,7 @@ public class CompraController {
 		return "compraForm";
 	}
 	
+    
 	@PostMapping("/compra/guardar")
 	public ModelAndView Guardar(@ModelAttribute("compra") Compra compra) {
 		ModelAndView model = new ModelAndView("compras");		

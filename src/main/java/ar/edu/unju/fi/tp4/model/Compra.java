@@ -4,9 +4,13 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Compra {
+	
 	private int id;
+	
 	private Producto producto;
+	
 	private int cantidad;
+	
 	private double total;
 	
 	public Compra() {
