@@ -17,7 +17,7 @@ public class ClienteServiceImp implements IClienteService {
     private List<Cliente> clientes;
 	private static final Log LOGGER = LogFactory.getLog(ClienteServiceImp.class);
 
-    @Override
+    //@Override
     public void agregarCliente(Cliente cliente) {
         clientes = TableClientes.registros;		
 		clientes.add(cliente);
@@ -26,7 +26,7 @@ public class ClienteServiceImp implements IClienteService {
         
     }
 
-    @Override
+    //@Override
     public List<Cliente> getClientes() {
         String cantidad = "";
 		if(this.clientes == null) {
@@ -39,7 +39,7 @@ public class ClienteServiceImp implements IClienteService {
 		return clientes;
     }
 
-    @Override
+    //@Override
     public List<Cliente> listadoCargado() {
         Cliente cliente = new Cliente("Dni", 29496334, "Farfan Sebastian", "sebas@gmail.com", "12345", LocalDate.of(1982, 12, 26), 388, 156827105, LocalDate.now());
 		clientes = TableClientes.registros;

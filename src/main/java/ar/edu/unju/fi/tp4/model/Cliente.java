@@ -170,8 +170,8 @@ public class Cliente {
 		LocalDateTime fechaHoraProxCumple = LocalDateTime.of(anio, this.fechaNacimiento.getMonth(),
 				this.fechaNacimiento.getDayOfMonth(), 0, 0, 0);
 		Duration duracion = Duration.between(ahora, fechaHoraProxCumple);
-		texto = texto + " hora:" + duracion.toHoursPart() + " min:" + duracion.toMinutesPart() + " seg:"
-				+ duracion.toSecondsPart();
+		texto = texto + " hora:" + duracion.toHours() + " min:" + duracion.toMinutes() + " seg:"
+				+ duracion.toMillis()/1000;
 
 		return texto;
 	}

@@ -11,9 +11,7 @@ public class Compra {
 	
 	public Compra() {
 		
-	}
-	
-	
+	}	
 	
 
 	public Compra(int id, Producto producto, int cantidad, double total) {
