@@ -1,10 +1,12 @@
 package ar.edu.unju.fi.tp4.model;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
 public class Compra {
 	private int id;
+	@Autowired
 	private Producto producto;
 	private int cantidad;
 	private double total;
@@ -52,7 +54,8 @@ public class Compra {
 	}
 
 	public double getTotal() {
-		return total;
+		this.total = this.producto.getPrecio()*this.cantidad;
+		return this.total;
 	}
 
 	public void setTotal(double total) {
