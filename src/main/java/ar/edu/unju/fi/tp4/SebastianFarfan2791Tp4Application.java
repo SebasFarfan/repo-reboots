@@ -9,10 +9,10 @@ public class SebastianFarfan2791Tp4Application {
 	public static void main(String[] args) {
 		SpringApplication.run(SebastianFarfan2791Tp4Application.class, args);
                 //INTEGRANTES:
-		// Farfán, Sebastián Jorge    Comisión 2
-		// Flores, Eduardo            Comisión 1
-		// Patagua, Jaime             Comisión 1
-		// 
+				// Farfán, Sebastián Jorge    Comisión 2
+				// Flores, Eduardo            Comisión 1
+				// Patagua, Jaime             Comisión 1
+				// 
 	}
 
 }
