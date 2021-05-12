@@ -20,15 +20,14 @@ public class CompraController {
 	
 	@Autowired
 	@Qualifier("compraUtilService")
-	private ICompraService compraService;
+	private ICompraService clienteService;
 
     @GetMapping("/compra/nuevo")
 	public String nuevoCompra(Model model) {
 		model.addAttribute(compra);
-		return "compraForm";
+		return "nuevoCompra";
 	}
 	
-    
 	@PostMapping("/compra/guardar")
 	public ModelAndView Guardar(@ModelAttribute("compra") Compra compra) {
 		ModelAndView model = new ModelAndView("compras");		
