@@ -20,7 +20,7 @@ public class CompraController {
 	
 	@Autowired
 	@Qualifier("compraUtilService")
-	private ICompraService clienteService;
+	private ICompraService compraService;
 
     @GetMapping("/compra/nuevo")
 	public String nuevoCompra(Model model) {
