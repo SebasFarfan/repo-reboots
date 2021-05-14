@@ -54,6 +54,11 @@ public class Compra {
         this.total = total;
     }
 
+    public double calcularTotal(double precio) {
+        this.total = this.cantidad*precio;
+        return this.total;
+    }
+
     @Override
     public String toString() {
         return "{" +

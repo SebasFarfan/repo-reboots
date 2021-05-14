@@ -35,5 +35,16 @@ public class ProductoServiceImp implements IProductoService {
                 "METHOD: obtenerUltimoProducto() - se obtiene el ultimo producto agregado a la lista -->" + producto);
         return producto;
     }
+
+    @Override
+    public List<Producto> getProductos() {
+        Producto p1 = new Producto(555, "Mouse inalambrico", 600, "Noga", 20);
+        Producto p2 = new Producto(555, "Disco SSD 250GB", 5600, "WD", 10);
+        Producto p3 = new Producto(555, "Pendrive 32GB", 2500, "Kington", 20);
+        listaProducto.add(p1);
+        listaProducto.add(p2);
+        listaProducto.add(p3);
+        return listaProducto;
+    }
     
 }

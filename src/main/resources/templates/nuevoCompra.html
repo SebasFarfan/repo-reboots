@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nueva Compra</title>
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/4.6.0-1/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/webjars/font-awesome/5.15.2/css/all.min.css}">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <header th:replace="layouts/header :: header"></header>
+    <div class="container dato-form">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-9 col-lg-8">
+                <div class="card border-primary">
+                    <div class="card-header text-center">
+                        <h4 class="card-title">Registro de Compra</h4>
+                    </div>
+                    <div class="card-body">
+                        <form th:action="@{/compra/guardar}" th:object="${compra}" method="POST">
+                            <div class="form-group">
+                                <label class="badge badge-primary" for="codigo">Código </label>            
+	                            <input class="form-control" type="number" id="codigo" th:field="*{id}">
+                            </div>
+                            <div class="form-group">
+                                <label class="badge badge-primary">Producto</label>
+                                <select th:field="*{producto.codigo}" class="form-control">
+                                    <option th:each="prod : ${productos}" th:value="${prod.codigo}" th:text="${prod.nombre}" th:selected="false"></option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="cantidad" class="badge badge-primary">Cantidad</label>            
+                                <input class="form-control" type="number" id="cantidad" th:field="*{cantidad}">
+                            </div>
+                            <div class="form-group">
+                                <label for="total" class="badge badge-primary">Total</label>            
+                                <input class="form-control" type="number" id="total" th:if="@{producto.codigo!=0}" value="algo">
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-success" type="submit"><i class="fas fa-plus"></i> Agregar Compra</button>
+                            </div>
+                        </form>
+                    </div>                    
+                </div>
+            </div>
+            <div class="col-md-3 col-lg-4 d-none d-sm-block">                
+                <aside th:replace="layouts/aside :: aside"></aside>                                
+            </div>            
+        </div>
+    </div>
+
+    <footer th:replace="layouts/footer :: footer"></footer>
+    <script th:src="@{/webjars/jquery/3.5.1/jquery.min.js}"></script>    
+    <script th:src="@{/webjars/popper.js/1.16.1-lts/umd/popper.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/4.6.0-1/js/bootstrap.min.js}"></script>
+
+</body>
+</html>
