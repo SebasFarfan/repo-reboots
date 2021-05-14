@@ -6,7 +6,7 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.stereotype.Service;
 
-import ar.edu.unju.fi.tp4.service.Compra;
+import ar.edu.unju.fi.tp4.model.Compra;
 import ar.edu.unju.fi.tp4.service.ICompraService;
 
 @Service("compraUtilService")
