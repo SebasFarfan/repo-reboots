@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 import ar.edu.unju.fi.tp4.model.Compra;
 import ar.edu.unju.fi.tp4.service.ICompraService;
-
+import ar.edu.unju.fi.tp4.util.TableCompras;
 @Service("compraUtilService")
 public class CompraServiceImp implements ICompraService {
 
@@ -17,6 +17,7 @@ public class CompraServiceImp implements ICompraService {
 
     @Override
     public void agregarCompra(Compra compra) {
+        compras = TableCompras.listaCompra;
         compras.add(compra);
 		LOGGER.info("METHOD: agregarCompra(compra) - se agregó una compra al listado -->"
                 + compras.get(compras.size()-1));
@@ -37,5 +38,5 @@ public class CompraServiceImp implements ICompraService {
         
     }
 
-    
+        
 }

@@ -26,18 +26,22 @@
                             </div>
                             <div class="form-group">
                                 <label class="badge badge-primary">Producto</label>
-                                <select th:field="*{producto.codigo}" class="form-control">
+                                <select th:field="*{producto.codigo}" class="form-control" id="producto">
                                     <option th:each="prod : ${productos}" th:value="${prod.codigo}" th:text="${prod.nombre}" th:selected="false"></option>
                                 </select>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group" id="cant">
                                 <label for="cantidad" class="badge badge-primary">Cantidad</label>            
-                                <input class="form-control" type="number" id="cantidad" th:field="*{cantidad}">
+                                <input class="form-control" name="cantidad" type="number" id="cantidad" th:field="*{cantidad}" >
+                            </div>                                                                                    
+                            <div th:fragment="totalCompra">
+                                <div class="form-group bloque-total">
+                                    <label for="total" class="badge badge-primary">Total</label>            
+                                    
+                                    <div th:text="${total}"></div>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label for="total" class="badge badge-primary">Total</label>            
-                                <input class="form-control" type="number" id="total" th:if="@{producto.codigo!=0}" value="algo">
-                            </div>
+                            
                             <div class="form-group">
                                 <button class="btn btn-success" type="submit"><i class="fas fa-plus"></i> Agregar Compra</button>
                             </div>
@@ -55,6 +59,7 @@
     <script th:src="@{/webjars/jquery/3.5.1/jquery.min.js}"></script>    
     <script th:src="@{/webjars/popper.js/1.16.1-lts/umd/popper.min.js}"></script>
     <script th:src="@{/webjars/bootstrap/4.6.0-1/js/bootstrap.min.js}"></script>
+    <script th:src="@{/js/compra.js}"></script>
 
 </body>
 </html>

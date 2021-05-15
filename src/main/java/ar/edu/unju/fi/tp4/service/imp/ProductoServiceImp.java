@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import ar.edu.unju.fi.tp4.model.Producto;
 import ar.edu.unju.fi.tp4.service.IProductoService;
+import ar.edu.unju.fi.tp4.util.TableProductos;
 
 /**
  * clase que implementa la interface IProductoService
@@ -19,6 +20,8 @@ public class ProductoServiceImp implements IProductoService {
     private static final Log LOGGER = LogFactory.getLog(ProductoServiceImp.class);
 
     private List<Producto> listaProducto = new ArrayList<Producto>();
+
+
 
     @Override
     public void agregarProducto(Producto producto) {
@@ -38,13 +41,16 @@ public class ProductoServiceImp implements IProductoService {
 
     @Override
     public List<Producto> getProductos() {
-        Producto p1 = new Producto(555, "Mouse inalambrico", 600, "Noga", 20);
-        Producto p2 = new Producto(555, "Disco SSD 250GB", 5600, "WD", 10);
-        Producto p3 = new Producto(555, "Pendrive 32GB", 2500, "Kington", 20);
-        listaProducto.add(p1);
-        listaProducto.add(p2);
-        listaProducto.add(p3);
-        return listaProducto;
+        if (TableProductos.listaProductos.isEmpty()) {
+            Producto p1 = new Producto(555, "Mouse inalambrico", 600, "Noga", 20);
+            Producto p2 = new Producto(600, "Disco SSD 250GB", 5600, "WD", 10);
+            Producto p3 = new Producto(244, "Pendrive 32GB", 2500, "Kington", 20);
+            TableProductos.listaProductos.add(p1);
+            TableProductos.listaProductos.add(p2);
+            TableProductos.listaProductos.add(p3);
+        }
+                       
+        return TableProductos.listaProductos;
     }
     
 }
